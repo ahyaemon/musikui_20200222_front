@@ -1,5 +1,4 @@
-<template>
-    <div class="home">
-        <h1>about</h1>
-    </div>
+<template lang="pug">
+    .about
+        h2 about
 </template>
