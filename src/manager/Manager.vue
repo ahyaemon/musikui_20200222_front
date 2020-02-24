@@ -1,6 +1,6 @@
 <template lang="pug">
     #app
-        MNav(:links='links' color='#00903e')
+        MNav(:links='links' :color='color')
         .main
             router-view
 </template>
@@ -9,6 +9,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 import MNav from '@/layouts/MNav.vue'
 import Link from '@/layouts/link'
+import Color from '@/domain/vo/Color'
 
 @Component({
     components: {
@@ -19,6 +20,10 @@ export default class Manager extends Vue {
     private links: Link[] = [
         { url: '/manager/contest', title: '今週の問題' }
     ]
+
+    get color () {
+        return Color.Green
+    }
 }
 </script>
 

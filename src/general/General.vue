@@ -1,6 +1,6 @@
 <template lang="pug">
     #app
-        MNav(:links='links' color='#BA6262')
+        MNav(:links='links' :color='color')
         .main
             router-view
 </template>
@@ -9,6 +9,7 @@
 import { Component, Vue } from 'vue-property-decorator'
 import MNav from '@/layouts/MNav.vue'
 import Link from '@/layouts/link'
+import Color from '@/domain/vo/Color'
 
 @Component({
     components: {
@@ -23,6 +24,10 @@ export default class General extends Vue {
         { url: '/column', title: 'コラム' },
         { url: '/about', title: 'About' }
     ]
+
+    get color () {
+        return Color.Red
+    }
 }
 </script>
 
