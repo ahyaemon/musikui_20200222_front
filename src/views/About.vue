@@ -18,17 +18,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import MCard from '@/components/card/MCard.vue'
-import MCardTitle from '@/components/card/MCardTitle.vue'
-import MCardSubTitle from '@/components/card/MCardSubTitle.vue'
-import MCardBody from '@/components/card/MCardBody.vue'
+import mCardComponents from '@/components/card/MCardComponents'
 
 @Component({
     components: {
-        MCard,
-        MCardTitle,
-        MCardSubTitle,
-        MCardBody
+        ...mCardComponents
     }
 })
 export default class App extends Vue {}
