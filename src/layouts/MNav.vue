@@ -13,8 +13,7 @@
 
 <script lang="ts">
 import 'luxbar/build/luxbar.min.css'
-import Vue from 'vue'
-import { Component } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 interface Link {
     url: string;
