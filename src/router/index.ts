@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { routes as generalRoutes } from '../general/router/index'
+import { routes as managerRoutes } from '../manager/router/index'
 
 Vue.use(VueRouter)
 
@@ -12,9 +13,10 @@ const routes = [
         children: generalRoutes
     },
     {
-        path: '/about',
-        name: 'About',
-        component: () => import(/* webpackChunkName: "about" */ '../general/views/About.vue')
+        path: '/manager',
+        name: 'Manager',
+        component: () => import(/* webpackChunkName: "about" */ '../manager/Manager.vue'),
+        children: managerRoutes
     }
 ]
 

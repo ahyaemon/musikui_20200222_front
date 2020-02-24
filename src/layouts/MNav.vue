@@ -1,5 +1,5 @@
 <template lang="pug">
-    header#luxbar.luxbar-static
+    header#luxbar.luxbar-static(v-bind:style="borderStyle")
         input#luxbar-checkbox.luxbar-checkbox(type="checkbox")
         .luxbar-menu.luxbar-menu-left.luxbar-menu-dark
             ul.luxbar-navigation
@@ -18,7 +18,14 @@ import Link from '@/layouts/link'
 
 @Component
 export default class MNav extends Vue {
-    @Prop({ default: [] }) private links!: Link[]
+    @Prop({ default: () => [] }) private links!: Link[]
+    @Prop({ default: '#000' }) private color!: string
+
+    get borderStyle () {
+        return {
+            borderBottom: 'solid 5px ' + this.color
+        }
+    }
 }
 </script>
 

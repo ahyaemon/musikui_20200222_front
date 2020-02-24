@@ -1,6 +1,6 @@
 <template lang="pug">
     #app
-        MNav(:links='links' color='#BA6262')
+        MNav(:links='links' color='#00903e')
         .main
             router-view
 </template>
@@ -15,13 +15,9 @@ import Link from '@/layouts/link'
         MNav
     }
 })
-export default class General extends Vue {
+export default class Manager extends Vue {
     private links: Link[] = [
-        { url: '/how', title: '解き方' },
-        { url: '/', title: '今週の問題' },
-        { url: '/search-question', title: '過去問たち' },
-        { url: '/column', title: 'コラム' },
-        { url: '/about', title: 'About' }
+        { url: '/manager/contest', title: '今週の問題' }
     ]
 }
 </script>
