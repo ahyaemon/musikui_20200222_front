@@ -1,8 +1,8 @@
 <template lang="pug">
     header#luxbar.luxbar-static
-        input#luxbar-checkbox.luxbar-checkbox(type="checkbox" v-model="checked")
+        input#luxbar-checkbox.luxbar-checkbox(type="checkbox")
         .luxbar-menu.luxbar-menu-left.luxbar-menu-dark
-            ul.luxbar-navigation(@click="closeMenu")
+            ul.luxbar-navigation
                 li.luxbar-header
                     router-link.luxbar-brand(to="/") 虫食い算やろうぜ！！
                     label#luxbar-hamburger.luxbar-hamburger.luxbar-hamburger-spin(for="luxbar-checkbox")
@@ -30,12 +30,6 @@ export default class MNav extends Vue {
         { url: '/column', title: 'コラム' },
         { url: '/about', title: 'About' }
     ]
-
-    private checked = false
-
-    private closeMenu () {
-        this.checked = false
-    }
 }
 </script>
 
