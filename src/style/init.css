@@ -6,7 +6,7 @@
 
 body {
     font-family: 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
-    background-image: url('../assets/background.jpeg');
+    background-image: url('../general/style/background.jpeg');
 }
 
 button, input, select, textarea {

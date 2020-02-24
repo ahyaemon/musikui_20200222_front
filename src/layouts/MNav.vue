@@ -13,22 +13,12 @@
 
 <script lang="ts">
 import 'luxbar/build/luxbar.min.css'
-import { Component, Vue } from 'vue-property-decorator'
-
-interface Link {
-    url: string;
-    title: string;
-}
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import Link from '@/layouts/link'
 
 @Component
 export default class MNav extends Vue {
-    private links: Link[] = [
-        { url: '/how', title: '解き方' },
-        { url: '/', title: '今週の問題' },
-        { url: '/search-question', title: '過去問たち' },
-        { url: '/column', title: 'コラム' },
-        { url: '/about', title: 'About' }
-    ]
+    @Prop({ default: [] }) private links!: Link[]
 }
 </script>
 

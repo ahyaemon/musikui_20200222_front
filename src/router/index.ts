@@ -1,19 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import About from '../views/About.vue'
+import { routes as generalRoutes } from '../general/router/index'
 
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
-        name: 'About',
-        component: About
+        name: 'General',
+        component: () => import(/* webpackChunkName: "general" */ '../general/General.vue'),
+        children: generalRoutes
     },
     {
         path: '/about',
         name: 'About',
-        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../general/views/About.vue')
     }
 ]
 
